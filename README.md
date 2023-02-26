@@ -53,9 +53,9 @@ The application has two main sub-commands: `get svc` and `get deploy`.
 ### Retrieve service data
 To retrieve service data, run the following command:
 ```
-k8s-info get svc 
+k8s-info get svc --kubeconfig </path/to/kubeconfig>
 ```
-![image](https://user-images.githubusercontent.com/106534693/221397549-ff31823a-2480-4c7b-a6df-b589ddee5b4b.png)
+![image](https://user-images.githubusercontent.com/106534693/221403374-2ace7dee-8926-430c-b80f-23f80ae7ccc0.png)
 
 This command retrieves the services in the *default* namespace and outputs their names, types, and exposed ports in JSON format.
 
