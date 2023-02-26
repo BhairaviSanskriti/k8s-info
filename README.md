@@ -55,6 +55,8 @@ To retrieve service data, run the following command:
 ```
 k8s-info get svc 
 ```
+![image](https://user-images.githubusercontent.com/106534693/221397549-ff31823a-2480-4c7b-a6df-b589ddee5b4b.png)
+
 This command retrieves the services in the *default* namespace and outputs their names, types, and exposed ports in JSON format.
 
 ### Retrieve deployment data
@@ -62,6 +64,8 @@ To retrieve deployment data, run the following command:
 ```
 k8s-info get deploy -n kube-system
 ```
+![image](https://user-images.githubusercontent.com/106534693/221397451-5adc5265-9ea8-4311-863e-4dbb6ae8d935.png)
+
 This command retrieves the deployments in the *kube-system* namespace and outputs their names, healthy replicas, and unhealthy replicas in JSON format.
 
 ## Output formatting
@@ -69,8 +73,10 @@ By default, the output of the `k8s-info` command is in plain text format. Howeve
 
 To install [jq](https://stedolan.github.io/jq/), follow the installation instructions for your operating system or package manager. Once installed, you can pipe the output of `k8s-info` to `jq` like this:
 ```
-k8s-info | jq .
+k8s-info get deploy -n kube-system | jq 
 ```
+![image](https://user-images.githubusercontent.com/106534693/221397510-59ca1fad-0147-4f31-8740-341535210070.png)
+
 This will pretty-print the output in JSON format, which can make it easier to read and parse. You can also use `jq` to filter the output based on specific criteria, extract specific fields, and perform other operations.
 
 Note that using `jq` is completely optional and depends on your needs. However, it can be a powerful tool for working with JSON output from various command-line tools, including `k8s-info`.
