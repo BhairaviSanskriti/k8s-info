@@ -47,7 +47,8 @@ k8s-info [flags]
     - `$HOME/.kube/config`.
     - `$PWD/kubeconfig`.
     
-If none of the above locations contains a kubeconfig file, the function will assume that it is running inside a Kubernetes cluster and try to obtain the configuration from the in-cluster environment.
+If none of the above locations contains a kubeconfig file, the function will assume that it is running inside a Kubernetes cluster and try to obtain the configuration from the in-cluster environment. Set `KUBERNETES_SERVICE_HOST` and `KUBERNETES_SERVICE_PORT` in case the function uses in-cluster info.
+
 
 The application has two main sub-commands: `get svc` and `get deploy`.
 
