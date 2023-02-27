@@ -27,14 +27,7 @@ func runService(cmd *cobra.Command, args []string) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	if err != nil {
-		panic(err)
-	}
-
-	if err != nil {
-		panic(err)
-	}
-
+	
 	services, err := clientset.CoreV1().Services(namespace).List(context.Background(), v1.ListOptions{})
 
 	if err != nil {
