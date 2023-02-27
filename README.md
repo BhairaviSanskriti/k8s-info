@@ -46,6 +46,7 @@ k8s-info [flags]
     - The path specified in the `KUBECONFIG` environment variable.
     - `$HOME/.kube/config`.
     - `$PWD/kubeconfig`.
+    
 If none of the above locations contains a kubeconfig file, the function will assume that it is running inside a Kubernetes cluster and try to obtain the configuration from the in-cluster environment.
 
 The application has two main sub-commands: `get svc` and `get deploy`.
